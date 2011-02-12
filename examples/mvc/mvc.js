@@ -143,6 +143,8 @@ function controllerAction(name, plural, action, fn) {
       }
       return res.render(path, options, fn);
     };
+	//fn.apply
+	//这里调用apply的意思是将this(当前对象，本函数)中的的变量及方法替换fn对象中的同名变量及方法。
     fn.apply(this, arguments);
   };
 }
